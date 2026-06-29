@@ -64,7 +64,6 @@ function WhySolar(){
                     </button>
                 </div>
                 
-                {/* Right: Video Player */}
                 <div className=' border-2 border-yellow-400 mx-auto mt-8 rounded-2xl'>
                     <video 
                         className='w-150 h-full object-fit rounded-2xl' 
@@ -113,10 +112,9 @@ function WhySolar(){
         <img className="absolute inset-0 w-full h-full object-cover" src={bgcal} alt="background calculator" />
         <div className="absolute inset-0 bg-black/60" />
 
-        {/* Cards container — flex row, side by side */}
         <div className="relative z-10 flex flex-row gap-6">
 
-          {/* Left Card */}
+
           <div className="bg-white flex flex-col w-120 h-150 rounded-2xl p-6">
             <h2>Average Electric Bill</h2>
             <input className="border mt-2 p-2 rounded-xl" type="text" value={bill} onChange={(e) => setBill(e.target.value)} placeholder="Type Electric bill here" />
