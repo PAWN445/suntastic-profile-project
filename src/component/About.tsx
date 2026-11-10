@@ -167,8 +167,8 @@ function About(){
                 <h6>CONTACT INFORMATION</h6>
                 <h6 className="text-balance">
                     1053 Zabarte rd,<br/>
+                    Caloocan City, Philippines <br/>
                     near at wadfow ammena construction supplies trading <br/>
-                    Caloocan City, Philippines
                 </h6>
                 <p>suntasticsolarcorporation@gmail.com</p>
             </div>
