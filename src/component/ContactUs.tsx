@@ -112,16 +112,17 @@ function ContactUs(){
 
             <div className='rounded-xl mx-auto my-auto p-6'>
                 <img className='rounded-2xl h-100 w-full shadow-2xl' src={customerservice} alt="contact bg" />
-                <p className='m-4 text-balance'>Level 24, One Bonifacio High Street<br/> Bonifacio Global City, Metro Manila, Philippines</p>
+                <p className='m-4 text-balance'>1053 Zabarte rd,<br/>
+                    Caloocan City, Philippines</p>
                 <div className='flex flex-col gap-2 p-2 m-2'>
                     <div className='flex flex-row gap-2'>
                         <Mail size={30} className="" />
-                        <p>arnoldsuntasticsolarcorp@gmail.com</p>
+                        <p>suntasticsolarcorporation@gmail.com</p>
                     </div>
 
                     <div className='flex flex-row gap-2'>
                         <Phone size={30} className=''/>
-                        <p>+63991-403-9642</p>
+                        <p>(02) 8641 6976 | 0969 018 6025</p>
                     </div>
 
 
