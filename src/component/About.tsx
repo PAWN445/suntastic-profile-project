@@ -166,11 +166,11 @@ function About(){
             <div className="flex flex-col gap-4">
                 <h6>CONTACT INFORMATION</h6>
                 <h6 className="text-balance">
-                    3rd Floor, SPEC Center No. 66,<br/>
-                    Alabang-Zapote Road, Pamplona Uno, <br/>
-                    Las Piñas City, Philippines
+                    1053 Zabarte rd,<br/>
+                    near at wadfow ammena construction supplies trading <br/>
+                    Caloocan City, Philippines
                 </h6>
-                <p>arnoldsuntasticsolarcorp@gmail.com</p>
+                <p>suntasticsolarcorporation@gmail.com</p>
             </div>
         
             <div className="flex flex-col gap-4">
@@ -178,9 +178,7 @@ function About(){
                 <div className="flex flex-row">
                 </div>
                 <p>
-                    Tel No.: 282824465 | 287112379 <br/>
-                    After-Sales Hotline: <br/>
-                    0998-541-6771 |  0917-7012-422
+                    Tel No.: (02) 8641 6976 | 0969 018 6025 <br/>
                 </p>
             </div>
         </div>
