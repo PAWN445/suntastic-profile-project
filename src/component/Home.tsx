@@ -302,10 +302,11 @@ function calculate(){
             <div className="flex flex-col gap-4">
                 <h6>CONTACT INFORMATION</h6>
                 <h6 className="text-balance">
-                    Level 24, One Bonifacio High Street<br/> 
-                    Bonifacio Global City, Metro Manila, Philippines
+                    1053 Zabarte rd,<br/>
+                    Caloocan City, Philippines <br/>
+                    near at wadfow ammena construction supplies trading
                 </h6>
-                <p>arnoldsuntasticsolarcorp@gmail.com</p>
+                <p>suntasticsolarcorporation@gmail.com</p>
             </div>
         
             <div className="flex flex-col gap-4">
@@ -313,7 +314,7 @@ function calculate(){
                 <div className="flex flex-row">
                 </div>
                 <p>
-                    Phone No : +63991-403-9642 <br/>
+                    Phone No : 02 8641 6976 | 0969 018 6025 <br/>
                 </p>
             </div>
         </div>
