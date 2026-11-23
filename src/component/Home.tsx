@@ -1,6 +1,6 @@
 import bgVideo from "../assets/Homepage-BG.mp4";
 import image1 from "../assets/image1.jpg"
-import image2 from "../assets/image2.jpg"
+import image2 from "../assets/ate-vi1.jpg"
 import image3 from "../assets/image3.jpg"
 import image4 from "../assets/image4.jpg"
 import image5 from "../assets/image5.jpg"
@@ -62,7 +62,7 @@ function calculate(){
         <div className="flex-row">
             <h1 className="text-green-700 font-bold py-4">Our Vision</h1>
             <h1 className="text-5xl font-bold mb-4 py-4">Solar to Every Filipino</h1>
-            <p className="py-4">The biggest distributors of solar products in 2018, we expanded our market as<br/> a solar energy provider 
+            <p className="py-4">The biggest distributors of solar products in 2026, we expanded our market as<br/> a solar energy provider 
                 offering a full service of solar projects for residential,<br/> commercial, and industrial sectors.</p>
         <button className="bg-green-700 py-2 px-10 rounded text-white">Message Us Now</button>
         
