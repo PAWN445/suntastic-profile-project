@@ -2,7 +2,7 @@ import bgVideo from "../assets/Homepage-BG.mp4";
 import image1 from "../assets/image1.jpg"
 import image2 from "../assets/ate-vi1.jpg"
 import image3 from "../assets/2.jpg"
-import image4 from "../assets/image4.jpg"
+import image4 from "../assets/bulacan.jpg"
 import image5 from "../assets/image5.jpg"
 import image6 from "../assets/image6.jpg"
 import bgcal from "../assets/bg-cal.jpg";
@@ -68,7 +68,7 @@ function calculate(){
         
         <div className=" text-center flex flex-row justify-around bg-green-700 gap-2 my-4 p-5 text-white rounded-xl">
             <div className="">
-                <h1 className="font-black text-2xl">1+</h1><br/>
+                <h1 className="font-black text-2xl">5+</h1><br/>
                 <h3 className="font-medium text-base">Successful<br/> Installations</h3>
             </div>
             <div className="flex-col">
