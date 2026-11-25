@@ -56,8 +56,10 @@ function calculate(){
             <div className="relative h-full z-10 flex flex-col justify-center items-center text-center">
             <h1 className="text-5xl font-bold text-white mb-4">SUNTASTIC SOLAR CORP</h1>
             <p className="text-2xl font-regular text-white mb-4">Empowering Your Future with <span className="text-green-500">Clean Energy.</span></p>
-            <button onClick={() => window.location.href = '/ContactUs'} className="bg-green-700 text-white py-2 px-10 rounded">Free Consultation</button>
-            <button onClick={() => window.location.href = '/ContactUs'} className="bg-white text-green-700 py-2 px-10 rounded border border-green-700 ml-4">Free Ocular Site Visit</button>
+            <div className="flex flex-row">
+                 <button onClick={() => window.location.href = '/ContactUs'} className="bg-green-700 text-white py-2 px-10 rounded">Free Consultation</button>
+                 <button onClick={() => window.location.href = '/ContactUs'} className="bg-white text-green-700 py-2 px-10 rounded border border-green-700 ml-4">Free Ocular Site Visit</button>
+            </div>
             </div>
     </div>
     <div className="relative justify-around flex flex-row overflow-hidden h-150 w-full bg-stone-50">
