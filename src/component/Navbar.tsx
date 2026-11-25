@@ -13,9 +13,8 @@ function Navbar() {
             </Link>
             <nav className="flex flex-row text-white items-center gap-8 text-lg">
                     <Link to="/" className="hover:text-green-400 transition-colors">Home</Link>
-                    <Link to="/about" className="hover:text-green-400 transition-colors">About</Link>
-                    <Link to="/projects" className="hover:text-green-400 transition-colors">Promo</Link>
-                    <Link to="/why-solar" className="hover:text-green-400 transition-colors">Why Solar</Link>
+                    <Link to="/about" className="hover:text-green-400 transition-colors">About Us</Link>
+                    <Link to="/projects" className="hover:text-green-400 transition-colors">Projects</Link>
                     <Link to="/contact" className="hover:text-green-400 transition-colors">Contact Us</Link>
             </nav>
         </div>
