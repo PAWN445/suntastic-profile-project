@@ -62,8 +62,8 @@ function calculate(){
         <div className="flex-row">
             <h1 className="text-green-700 font-bold py-4">Our Vision</h1>
             <h1 className="text-5xl font-bold mb-4 py-4">Solar to Every Filipino</h1>
-            <p className="py-4">The biggest distributors of solar products in 2026, we expanded our market as<br/> a solar energy provider 
-                offering a full service of solar projects for residential,<br/> commercial, and industrial sectors.</p>
+            <p className="py-4">Suntastic Solar Corporation provides innovative solar energy solutions for residential, commercial, <br/>
+            and industrial applications across the Philippines.</p>
         <button className="bg-green-700 py-2 px-10 rounded text-white">Message Us Now</button>
         
         <div className=" text-center flex flex-row justify-around bg-green-700 gap-2 my-4 p-5 text-white rounded-xl">
