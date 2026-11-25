@@ -1,4 +1,4 @@
-import bgVideo from "../assets/Homepage-BG.mp4";
+import bgVideo from "../assets/BGWEB.mp4";
 import image1 from "../assets/image1.jpg"
 import image2 from "../assets/ate-vi1.jpg"
 import image3 from "../assets/ian.jpg"
