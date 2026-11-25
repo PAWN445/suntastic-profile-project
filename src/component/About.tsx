@@ -24,12 +24,12 @@ function About(){
                 <h3 className='font-bold'>YOUR MOST RELIABLE SOLAR PARTNER</h3>
                 <h6 className='font-extrabold text-3xl'>SUNTASTIC SOLAR CORP</h6>
                 <p className='text-balance'>Established in April 2026, Suntastic Solar Corporation is a solar energy solutions provider committed<br/> 
-                to making clean, reliable, and sustainable energy accessible to Filipino homes and businesses.</p><br/> 
+                to making clean, reliable, and sustainable energy accessible to Filipino homes and businesses.</p>
                 <p className='text-balance'>We specialize in providing comprehensive solar energy solutions for residential, commercial, and <br/>
                 industrial applications. Through quality solar products, professional installation, and carefully designed systems, <br/>
-                we aim to deliver solutions that meet the unique energy needs of every client.</p><br/>
+                we aim to deliver solutions that meet the unique energy needs of every client.</p>
                 <p className='text-balance'>Our commitment goes beyond installation. We value customer satisfaction by providing reliable service, <br/>
-                proper system commissioning, and dedicated after-sales support to ensure long-term performance and peace of mind.</p><br/>
+                proper system commissioning, and dedicated after-sales support to ensure long-term performance and peace of mind.</p>
                 <p className='text-balance'>Guided by our commitment to People, Planet, and Progress, we strive to contribute to a more<br/>
                  sustainable future by promoting renewable energy, reducing dependence on conventional electricity, <br/>
                  and helping Filipinos embrace the benefits of solar power. <b>Our Vision: "Solar to Every Filipino."</b></p><br/>
