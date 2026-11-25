@@ -23,15 +23,18 @@ function About(){
             <div className='flex flex-col m-4 gap-2 justify-center'>
                 <h3 className='font-bold'>YOUR MOST RELIABLE SOLAR PARTNER</h3>
                 <h6 className='font-extrabold text-3xl'>SUNTASTIC SOLAR CORP</h6>
-                <p className='text-balance'>From one of the biggest distributors of solar products in 2018, we expanded<br/> 
-                    our market as a solar energy provider offering a full-service of solar<br/> 
-                    projects for residential, commercial and industrial sectors. With a team of<br/> 
-                    licensed engineers and professionals who are expert in the field of solar, we<br/> 
-                    can provide a high quality installation, seamless service, and satisfy our<br/> 
-                    clients even after installation with our after-sales. By treating the People,<br/> 
-                    the Planet and Profit as equally important in our operation, we are<br/> 
-                    committed to advocate a brighter future for economical and<br/> 
-                    environmental growth and to be true to our vision – “Solar to Every Filipino”.</p>
+                <p className='text-balance'>Established in April 2026, Suntastic Solar Corporation is a solar energy solutions provider committed<br/> 
+                to making clean, reliable, and sustainable energy accessible to Filipino homes and businesses.</p><br/> 
+                <p className='text-balance'>We specialize in providing comprehensive solar energy solutions for residential, commercial, and <br/>
+                industrial applications. Through quality solar products, professional installation, and carefully designed systems, <br/>
+                we aim to deliver solutions that meet the unique energy needs of every client.</p><br/>
+                <p className='text-balance'>Our commitment goes beyond installation. We value customer satisfaction by providing reliable service, <br/>
+                proper system commissioning, and dedicated after-sales support to ensure long-term performance and peace of mind.</p><br/>
+                <p className='text-balance'>Guided by our commitment to People, Planet, and Progress, we strive to contribute to a more<br/>
+                 sustainable future by promoting renewable energy, reducing dependence on conventional electricity, <br/>
+                 and helping Filipinos embrace the benefits of solar power. <b>Our Vision: "Solar to Every Filipino."</b></p><br/>
+
+
             </div>
 
             <div className='flex flex-col m-4 gap-2'>
