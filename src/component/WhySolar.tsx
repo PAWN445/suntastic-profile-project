@@ -1,8 +1,5 @@
 import {useState } from 'react';
 import contactbg from "../assets/contactbg.jpg"
-import whyvid from "../assets/finalWhy.mp4"
-import firstclip from "../assets/1st-clip.mp4"
-import secondclip from "../assets/2nd-clip.mp4"
 import { Link } from 'react-router-dom'
 import logo from "../assets/facebook-bg-png.png";
 import bgcal from "../assets/bg-cal.jpg";
@@ -67,7 +64,7 @@ function WhySolar(){
                 <div className=' border-2 border-yellow-400 mx-auto mt-8 rounded-2xl'>
                     <video 
                         className='w-150 h-full object-fit rounded-2xl' 
-                        src={whyvid}
+                        src="https://res.cloudinary.com/dxjv0gq2k/video/upload/v1698230915/solar-vid_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1.mp4"
                         controls
                     />
                 </div>
@@ -76,7 +73,7 @@ function WhySolar(){
         </div>
         <div className='flex flex-row justify-center gap-8 m-4'>
             <div className='flex-row'>
-                <video className='w-150 h-full object-cover border-green-500 border-4' src={firstclip} autoPlay muted loop playsInline></video>
+                <video className='w-150 h-full object-cover border-green-500 border-4' src="https://res.cloudinary.com/dxjv0gq2k/video/upload/v1698230915/1st-clip_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1.mp4" autoPlay muted loop playsInline></video>
             </div>
             <div className='flex flex-col justify-center'>
                 <h1 className='text-2xl font-medium pb-4'>Solar reduces or eliminates your electricity bill</h1>
@@ -104,7 +101,7 @@ function WhySolar(){
                     carbon emission reduced per one regular household using solar is equivalent to planting 100+ trees.</p>
                 </div>
             <div className='flex-row'>
-                <video className='w-150 h-full object-cover border-green-500 border-4' src={secondclip} autoPlay muted loop playsInline></video>
+                <video className='w-150 h-full object-cover border-green-500 border-4' src="https://res.cloudinary.com/dxjv0gq2k/video/upload/v1698230915/2nd-clip_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1.mp4" autoPlay muted loop playsInline></video>
             </div>
         </div>
 
