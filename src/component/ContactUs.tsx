@@ -16,6 +16,7 @@ function ContactUs(){
         message:'',
         agreeToTerm: false,
     });
+    const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const {name, value, type} = e.target;
         const checked = (e.target as HTMLInputElement).checked;
@@ -23,14 +24,43 @@ function ContactUs(){
             ...prev, [name]: type === 'checkbox' ? checked : value,
         }));
     };
-      const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    if (!formData.agreeToTerm) {
-      alert('Please agree to the terms first.');
-      return;
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  if (!formData.agreeToTerm) {
+    alert('Please agree to the terms first.');
+    return;
+  }
+  setStatus('sending');
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+        subject: formData.subject || 'New inquiry from Suntastic website',
+        from_name: 'Suntastic Website',
+        name: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        average_monthly_bill: formData.monthlyBill,
+        address: formData.address,
+        message: formData.message,
+      }),
+    });
+    const data = await res.json();
+    if (data.success) {
+      setStatus('success');
+      setFormData({
+        fullName: '', email: '', phone: '', monthlyBill: '',
+        address: '', subject: '', message: '', agreeToTerm: false,
+      });
+    } else {
+      setStatus('error');
     }
-    console.log(formData); // i-send mo dito sa Supabase/API
-  };
+  } catch {
+    setStatus('error');
+  }
+};
     return(
         <>
           <div className="relative overflow-hidden w-full h-100">
@@ -43,71 +73,50 @@ function ContactUs(){
             </div>
         </div>
         <div className='bg-white w-full flex flex-row'>
-            <div className='flex flex-col gap-4 mx-auto p-6 max-w-xl'>
-    <input
-        type="text"
-        name="fullName"
-        value={formData.fullName}
-        onChange={handleChange}
-        placeholder="Full Name"
-        className="border border-gray-300 rounded px-4 py-3 w-full"/>
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        placeholder="Email"
-        className="border border-gray-300 rounded px-4 py-3 w-full"/>
-      <input
-        type="tel"
-        name="phone"
-        value={formData.phone}
-        onChange={handleChange}
-        placeholder="Phone"
-        className="border border-gray-300 rounded px-4 py-3 w-full"/>
-      <input
-        type="text"
-        name="averageMonthlyBill"
-        value={formData.monthlyBill}
-        onChange={handleChange}
-        placeholder="Average Monthly Bill"
-        className="border border-gray-300 rounded px-4 py-3 w-full"/>
-      <input
-        type="text"
-        name="address"
-        value={formData.address}
-        onChange={handleChange}
-        placeholder="Address"
-        className="border border-gray-300 rounded px-4 py-3 w-full"/>
-      <input
-        type="text"
-        name="subject"
-        value={formData.subject}
-        onChange={handleChange}
-        placeholder="Subject"
-        className="border border-gray-300 rounded px-4 py-3 w-full"/>
-      <textarea
-        name="message"
-        value={formData.message}
-        onChange={handleChange}
-        placeholder="Message"
-        rows={5}
-        className="border border-gray-300 rounded px-4 py-3 w-full resize-none"/>
-      <label className="flex items-start gap-2 text-sm text-gray-600">
-        <input
-          type="checkbox"
-          name="agreedToTerms"
-          checked={formData.agreeToTerm}
-          onChange={handleChange}
-          className="mt-1"/>
-        <span>
-          By clicking 'I accept' below, you confirm that you have read and understand
-          this form and agree to the collection, use, and storage of your personal information...
-        </span>
-      </label>
+<form onSubmit={handleSubmit} className='flex flex-col gap-4 mx-auto p-6 max-w-xl'>
+  <input type="text" name="fullName" value={formData.fullName} onChange={handleChange}
+    placeholder="Full Name" required
+    className="border border-gray-300 rounded px-4 py-3 w-full"/>
+  <input type="email" name="email" value={formData.email} onChange={handleChange}
+    placeholder="Email" required
+    className="border border-gray-300 rounded px-4 py-3 w-full"/>
+  <input type="tel" name="phone" value={formData.phone} onChange={handleChange}
+    placeholder="Phone" required
+    className="border border-gray-300 rounded px-4 py-3 w-full"/>
+  <input type="text" name="monthlyBill" value={formData.monthlyBill} onChange={handleChange}
+    placeholder="Average Monthly Bill"
+    className="border border-gray-300 rounded px-4 py-3 w-full"/>
+  <input type="text" name="address" value={formData.address} onChange={handleChange}
+    placeholder="Address"
+    className="border border-gray-300 rounded px-4 py-3 w-full"/>
+  <input type="text" name="subject" value={formData.subject} onChange={handleChange}
+    placeholder="Subject"
+    className="border border-gray-300 rounded px-4 py-3 w-full"/>
+  <textarea name="message" value={formData.message} onChange={handleChange}
+    placeholder="Message" rows={5} required
+    className="border border-gray-300 rounded px-4 py-3 w-full resize-none"/>
 
-      <button onClick={handleSubmit} className="bg-blue-600 text-white py-3 rounded hover:bg-blue-700"> Submit </button>
-            </div>
+  <label className="flex items-start gap-2 text-sm text-gray-600">
+    <input type="checkbox" name="agreeToTerm" checked={formData.agreeToTerm}
+      onChange={handleChange} className="mt-1"/>
+    <span>
+      By clicking 'Submit' below, you confirm that you have read and understand
+      this form and agree to the collection, use, and storage of your personal information.
+    </span>
+  </label>
+
+  <button type="submit" disabled={status === 'sending'}
+    className="bg-blue-600 text-white py-3 rounded hover:bg-blue-700 disabled:opacity-50">
+    {status === 'sending' ? 'Sending...' : 'Submit'}
+  </button>
+
+  {status === 'success' && (
+    <p className="text-green-600">Salamat! Natanggap na namin ang inyong mensahe at kokontakin namin kayo sa lalong madaling panahon.</p>
+  )}
+  {status === 'error' && (
+    <p className="text-red-600">May nangyaring error. Pakisubukan ulit o tawagan kami sa (02) 8641 6976.</p>
+  )}
+</form>
 
             <div className='rounded-xl mx-auto my-auto p-6'>
                 <img className='rounded-2xl h-100 w-full shadow-2xl' src={customerservice} alt="contact bg" />
