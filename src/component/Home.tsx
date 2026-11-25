@@ -12,6 +12,45 @@ import { Star } from 'lucide-react';
 import {useState } from 'react';
 import { Link } from 'react-router-dom'
 
+const services = [
+    {
+        title: "Engineering and Design",
+        image: image4,
+        description:
+            "We design custom solar power systems and help clients visualize layout and performance before installation with plans, diagrams and simulations.",
+    },
+    {
+        title: "Procurement, Installation, and Commissioning",
+        image: image5,
+        description:
+            "We handle all aspects of solar power system installation, including purchasing, logistics, construction, testing, commissioning and energization, for a seamless experience.",
+    },
+    {
+        title: "Operations & Maintenance",
+        image: image6,
+        description:
+            "We train clients and provide handover so they can operate their own system, and offer management services for peak performance throughout the system's lifetime.",
+    },
+    {
+        title: "Solar Panel Cleaning",
+        image: image1,
+        description:
+            "We remove dust, dirt and bird droppings from your panels to help keep them performing well.",
+    },
+    {
+        title: "Net Metering Service",
+        image: image2,
+        description:
+            "We assist with the requirements and application process so you can earn credits for the excess power your system exports to the grid.",
+    },
+    {
+        title: "Electrical Works",
+        image: image3,
+        description:
+            "We provide electrical installation, wiring and repair work for your home or business.",
+    },
+];
+
 function Home(){
         const [bill, setBill] = useState("");
    const [cal, setCal] = useState<number>(0);
@@ -98,53 +137,26 @@ function calculate(){
         </div>
     </div>
 
-    <div className="relative h-200 w-full bg-white text-center flex flex-col items-center my-8  p-4">
+    <section className="w-full bg-white text-center my-8 px-6 py-8">
         <h1 className="text-2xl font-black p-4">Here's what we can do for you</h1>
-        <hr id="guhit" className="w-20 p-4"/>
-        <p>We offer a range of services to get you set up with solar, including installation, net metering assistance, <br/>
-        and ongoing cleaning and maintenance. Let us take care of the details, so you can enjoy the benefits of<br/>
-         renewable energy. Contact us today to learn more.</p>
-         <div className="flex flex-row justify-around gap-4 my-5  p-6">
-            
-            <div className="flex-col text-start p-2">
-            <div className="rounded-xl w-100 h-100">
-                <img className="rounded-xl w-100 h-100 object-cover" src={image4} alt="image-1" />
-            </div>
-            <div className="w-full">
-                <h1  className="font-bold text-2xl text-gray-900">Engineering and Design</h1>
-                <p className="py-2">We design custom solar power systems and<br/>
-                help clients visualize layout and performance<br/>
-                before installation with plans, diagrams and simulations.</p>
-                <button className="bg-green-700 py-2 px-10 rounded-xl text-white">Learn More</button>
-            </div>
-         </div>
-            
-            <div className="flex-col text-start p-2">
-            <div className="rounded-xl w-100 h-100">
-                <img className="rounded-xl w-100 h-100 object-cover" src={image5} alt="image-1" />
-            </div>
-            <h1 className="font-bold text-2xl text-gray-900">Procurement, Installation,<br/> and Commissioning</h1>
-            <p className="py-2">We handle all aspects of solar power system <br/>
-                installation for clients, including purchasing, logistics, <br/>
-                construction, testing, commissioning and energization, <br/>
-                and provide a seamless experience.</p>
-            <button className="bg-green-700 py-2 px-10 rounded-xl text-white">Learn More</button>
-         </div>
-            
-            <div className="flex-col text-start p-2 m-0">
-            <div className="rounded-xl w-100 h-100">
-                <img className="rounded-xl w-100 h-100 object-cover" src={image6} alt="image-1" />
-            </div>
-            <h1  className="font-bold text-2xl text-gray-900">Operations & Maintenance</h1>
-            <p className=" py-4">We train clients and provide handover to <br/>
-                ensure they can operate their own system and <br/>
-                offer maintenance, cleaning, and management <br/>
-                services for peak performance throughout <br/>
-                system’s lifetime.</p>
-            <button className="bg-green-700 py-2 px-10 rounded-xl text-white">Learn More</button>
-         </div>
-         </div>
-    </div>
+        <hr id="guhit" className="w-20 mx-auto mb-4"/>
+        <p className="max-w-3xl mx-auto">We offer a range of services to get you set up with solar, including installation, net metering assistance,
+        and ongoing cleaning and maintenance. Let us take care of the details, so you can enjoy the benefits of
+        renewable energy. Contact us today to learn more.</p>
+
+        <div className="mx-auto mt-10 grid max-w-7xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => (
+                <div key={service.title} className="flex flex-col text-start">
+                    <img className="h-72 w-full rounded-xl object-cover" src={service.image} alt={service.title} loading="lazy" />
+                    <h2 className="mt-4 font-bold text-2xl text-gray-900">{service.title}</h2>
+                    <p className="py-2">{service.description}</p>
+                    <Link to="/contact" className="mt-auto self-start bg-green-700 hover:bg-green-800 py-2 px-10 rounded-xl text-white">
+                        Learn More
+                    </Link>
+                </div>
+            ))}
+        </div>
+    </section>
 
 <br/>
 
