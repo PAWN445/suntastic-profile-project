@@ -1,7 +1,6 @@
 import React, { useState, type ChangeEvent } from 'react'
 import contactbg from "../assets/contactbg.jpg"
 import customerservice from "../assets/customer_service_management.jpg"
-import maps from "../assets/gmap.png"
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom'
 import logo from "../assets/facebook-bg-png.png";
@@ -129,9 +128,16 @@ function ContactUs(){
                 </div>
             </div>
         </div>
-            <div className='w-full h-100 bg-green-100 mt-6'>
-              <img className='h-full w-full object-cover' src={maps} alt="google map" />
-            </div>
+                  <div className="w-full h-96 mt-6">
+                    <iframe
+                      title="Suntastic Solar Corp Location"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.2634143811165!2d121.05097087587573!3d14.754183973296154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b1e3152cbbe9%3A0xe4712ce57ca5663f!2sSuntastic%20Solar%20Corporation!5e0!3m2!1sen!2sph!4v1795570366507!5m2!1sen!2sph"
+                      className="w-full h-full border-0"
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
                   <div className="bg-green-800 w-full h-100 text-white p-8">
         <div className="flex flex-row justify-around items-center align-center my-auto">
             <div className="flex flex-col">
@@ -147,9 +153,8 @@ function ContactUs(){
                 <h6>Links</h6>
                 <ul className="flex flex-col">
                     <Link to="/" className="hover:text-green-400 transition-colors">Home</Link>
-                    <Link to="/about" className="hover:text-green-400 transition-colors">About</Link>
+                    <Link to="/about" className="hover:text-green-400 transition-colors">About Us</Link>
                     <Link to="/projects" className="hover:text-green-400 transition-colors">Our Projects</Link>
-                    <Link to="/why-solar" className="hover:text-green-400 transition-colors">Why Solar</Link>
                     <Link to="/contact" className="hover:text-green-400 transition-colors">Contact Us</Link>
                 </ul>
             </div>
