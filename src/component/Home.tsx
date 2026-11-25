@@ -57,8 +57,8 @@ function calculate(){
             <h1 className="text-5xl font-bold text-white mb-4">SUNTASTIC SOLAR CORP</h1>
             <p className="text-2xl font-regular text-white mb-4">Empowering Your Future with <span className="text-green-500">Clean Energy.</span></p>
             <div className="flex flex-row">
-                 <button onClick={() => window.location.href = '/contact'} className="bg-green-700 text-white py-2 px-10 rounded">Free Consultation</button>
-                 <button onClick={() => window.location.href = '/contact'} className="bg-white text-green-700 py-2 px-10 rounded border border-green-700 ml-4">Free Ocular Site Visit</button>
+                 <button onClick={() => window.location.href = '/contact'} className="bg-green-700 text-white py-2 px-10 rounded-full">Free Consultation</button>
+                 <button onClick={() => window.location.href = '/contact'} className="bg-white text-green-700 py-2 px-10 rounded-full border border-green-700 ml-4">Free Ocular Site Visit</button>
             </div>
             </div>
     </div>
